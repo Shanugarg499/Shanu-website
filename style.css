@@ -21,11 +21,18 @@
         background-color: grey;
     }
     .activepage{
-        background-color: lightcoral;
+        background-color: coral;
     }
     .links{
         text-align: left;
         display: flex;
+    }
+    .links a{
+        text-decoration: none;
+        color: rgb(62, 6, 100);
+        font-style: normal;
+        font-weight: bold;
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
     .ib{
         display: inline-block;
@@ -50,8 +57,14 @@
     .img{
         display: inline-block;
         width: 500px;
+        margin: 30px;
     }
     .right{
+        display: inline-block;
+        /* margin-left: 50px; */
+
+    }
+    .inlineblock{
         display: inline-block;
     }
     .rmargin{
@@ -60,8 +73,23 @@
     .lmargin{
         margin-left: 100px;
     }
+    .bmargin{
+        margin-bottom: 70px;
+    }
+    .box{
+        padding: 15px;
+        border: #333 solid;
+    }
+    #Cooltitle{
+        background-color: rgb(248, 8, 80);
+        font-family: monospace;
+        color: white;
+    }
 .mainbody{
     padding: 1%;
     margin-top: 90px;
     text-align: center;
+}
+#aboutme{
+    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.53vnOmOqs_mQrN1D5KBXuQHaHa%26pid%3DApi&f=1);
 }

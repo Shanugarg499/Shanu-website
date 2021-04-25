@@ -1,28 +1,70 @@
-/* * {
+* {
     border: solid #000000;
-} */
-#navbar {
-    position: fixed;
-    overflow: hidden;
+}
+.toggle{
+    display: none;
+    color: #333;
+}
+.toggle-button{
+    position: absolute;
+    top: 0.8rem;
+    right: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    width: 30px;
+    height: 21px;
+}
+.toggle-button .bar{
+    height: 3px;
     width: 100%;
+    background-color: white;
+    border-radius: 10px;
+}
+.heading{
+    color: white;
+    font-size: 20px;
+    margin: 15px;
+    /* text-align: center; */
+}
+#navbg {
+    position: fixed;
+    width: 99%;
+    /* height: 50px; */
     top: 1%;
+    display: flex;
     background-color: #333;
-    text-align: center;
     }
     #navbar a {
-    float: left;
     color: #f2f2f2;
     text-align: center;
     padding: 14px 16px;
-    font-size: 17px;
     text-decoration: none;
     }
-    #navbar :hover{
+    #navbar a:hover{
         background-color: grey;
     }
     .activepage{
         background-color: coral;
     }
+@media (max-width: 600px){
+    .toggle{
+        display: flex;
+    }
+    #navbar p{
+        display: none;
+        /* flex-direction: column; */
+    }
+    .activepage{
+        background-color: #333;
+    }
+    .ul{
+        width: 100%;
+    }
+    .navlink.active{
+        display: flex;
+    }
+}
     .links{
         text-align: left;
         display: flex;
@@ -34,17 +76,21 @@
         font-weight: bold;
         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     }
+    
     .ib{
         display: inline-block;
-        width: 600px;
+        /* width: 600px; */
         /* text-align: center; */
     }
     .center{
-        text-align: center;
+        margin: 0px;
+    }
+    .mauto{
+        margin: auto;
     }
     .abttxt{
-        width: 600px;
-        display: inline-block;
+        /* width: 600px; */
+        max-width: 600px;
         margin: 10px;
         font-style: italic;
         font-family: monospace;
@@ -55,9 +101,10 @@
         display: inline-block;
     }
     .img{
+        /* position: relative; */
         display: inline-block;
-        width: 500px;
-        margin: 30px;
+        max-width: 100%;
+        /* margin: 30px; */
     }
     .right{
         display: inline-block;
@@ -87,7 +134,7 @@
     }
 .mainbody{
     padding: 1%;
-    margin-top: 90px;
+    margin-top: 65px;
     text-align: center;
 }
 #aboutme{

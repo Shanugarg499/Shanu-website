@@ -17,7 +17,7 @@ body {
 }
 
 .brand-title {
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     margin: .5rem;
     font-weight: bold;
     font-family: monospace;
@@ -38,6 +38,7 @@ body {
 }
 
 .navbar-links li a {
+    font-size: 1.25rem;
     text-decoration: none;
     color: white;
     padding: 1rem;

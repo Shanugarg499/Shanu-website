@@ -26,6 +26,7 @@ body {
 .brand-title {
     font-size: 1.75rem;
     margin: .5rem;
+    margin-left: 1.1rem;
     font-weight: bold;
     font-family: monospace;
 }

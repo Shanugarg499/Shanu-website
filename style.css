@@ -130,6 +130,10 @@
     }
 }
 
+.g-signin2.flip{
+    display:none;
+}
+
 .hero-section{
     align-items: flex-start;
     /* background-image: url(images/darkbg.png); */
@@ -331,10 +335,3 @@ width: 100%;
 .large {
     font-size: 22px;
 }
-/* .body {
-    height: 100%;
-    width: 100%;
-}; */
-/* #aboutme{
-    background-image: url(https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Ftse2.mm.bing.net%2Fth%3Fid%3DOIP.53vnOmOqs_mQrN1D5KBXuQHaHa%26pid%3DApi&f=1);
-} */

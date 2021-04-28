@@ -122,6 +122,8 @@ body {
 .cgrid{
     /* float: left; */
 display: grid;
+height: fit-content;
+padding: 10px;
 max-width: 100%;
 }
 
@@ -138,21 +140,19 @@ max-width: 100%;
 }
 
 .card{
-/* list-style: none; */
 position: relative;
 }
 
 .card:before{
 content: '';
 display: block;
-padding-bottom: 150%;
+padding-bottom: 110%;
 width: 100%;
 }
 
 .cardbg{
 background-size: cover;
 background-position: center;
-/* bottom: 0; */
 left: 0;
 position: absolute;
 right: 0;
@@ -238,7 +238,7 @@ font-size: 1.5rem;
     margin-right: 37px;
 }
 .cmargin {
-    margin: 15px;
+    margin: 10px 5px;
 }
 .center {
     text-align: center;

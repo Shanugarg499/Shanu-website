@@ -20,7 +20,7 @@ function onSignIn(googleUser) {
     }else{
         signIn(googleUser)
     }
-    toggle_signin()
+    // toggle_signin()
 }
 
 // function toggle_signin(){

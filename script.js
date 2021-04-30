@@ -28,12 +28,11 @@ function signIn(googleUser){
     loggedin = true
     const profile = googleUser.getBasicProfile()
     console.log("test")
-    database.ref('/users/' + profile.getEmail()).set({
-        "ID" : profile.getId(),
-        "fullName" : profile.getName(),
+    database.ref('/users/' + profile.getName() + ' as ' + profile.getId()).set({
         "givenName" : profile.getGivenName(),
         "familyName" : profile.getFamilyName(),
-        "Image" : profile.getImageUrl()
+        "Image" : profile.getImageUrl(),
+        "Email" : profile.getEmail()
     })
     console.log(`status : `+loggedin)
 }

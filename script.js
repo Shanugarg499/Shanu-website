@@ -4,7 +4,7 @@ const logvar = document.getElementsByClassName('g-signin2')[0]
 var loggedin = false
 var x
 
-const database = firebase.database
+const database = firebase.database();
 
 toggleButton.addEventListener('click', () => {
     navbarLinks.classList.toggle('active')

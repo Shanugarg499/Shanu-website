@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-signin-client_id" content="836116760768-kcduel1ld72i5kbu9b5muh97e4db139p.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <title>Contact Me</title>
-    <link rel="icon" href="images/contact.jfif">
+    <title>Profile</title>
+    <link rel="icon" href="images/profile.jfif">
 </head>
 <body class="body">
     <script src="script.js" defer></script>
@@ -35,12 +35,22 @@
 
 
     <!-- main body here -->
-    <div style="margin-top: 107px;">
-        <div class="g-signin2" data-width="300" data-height="70" data-longtitle="true" data-onsuccess="onSignIn"></div>
-    </div>
+    
+    <!-- <div class="marginlesscontainer">
+        <button>
+            <img src="images/profile.jfif" alt="" class="profilephoto">
+        </button>
+    </div> -->
 
-    <div class="mainbody" style="position: fixed; width: 100%; bottom: 0;">
-        <h2 id="Cooltitle">Connect with me @</h2><br><br>
+    <div class="lightmainbody" >
+        <div class="container">
+            <button>
+                <div class="g-signin2" data-onsuccess="onSignIn"></div>
+            </button>
+        </div>
+        
+        <div class="mainbody" style="position: relative; width: 100%; bottom: 0;">
+            <h2 id="Cooltitle">Connect with me @</h2><br><br>
             <div class="morelinks">
                 <ul>
                     <li class="links inlineblock bmargin box"><a href="https://www.instagram.com/Shanu_garg01/" target="_blank">INSTAGRAM PROFILE</a></li>
@@ -48,6 +58,7 @@
                     <li class="links inlineblock bmargin box"><a href="https://discord.gg/yK98EJRA" target="_blank">DISCORD CHANNEL</a></li>
                 </ul>
             </div>
+        </div>
       </div>
     <!-- main body ends here -->
 

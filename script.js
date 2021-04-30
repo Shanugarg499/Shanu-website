@@ -21,9 +21,9 @@ function onSignIn(googleUser) {
     toggle_signin()
 }
 
-function toggle_signin(){
-    logvar.classList.toggle('flip')
-}
+// function toggle_signin(){
+//     logvar.classList.toggle('flip')
+// }
 
 function signIn(googleUser){
     x = googleUser.getBasicProfile()

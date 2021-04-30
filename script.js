@@ -20,6 +20,7 @@ function onSignIn(googleUser) {
     }else{
         signIn(googleUser)
     }
+    console.log("No Toggle anymore")
     // toggle_signin()
 }
 

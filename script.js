@@ -27,6 +27,7 @@ function signIn(googleUser){
     console.log(googleUser.getBasicProfile())
     loggedin = true
     const profile = googleUser.getBasicProfile()
+    console.log("test")
     database.ref('/users/' + profile.getEmail()).set({
         "ID" : profile.getId(),
         "fullName" : profile.getName(),

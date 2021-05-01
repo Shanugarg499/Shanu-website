@@ -310,6 +310,20 @@ width: 100%;
     text-align: center;
     max-width: 100%;    
 }
+
+.container {
+    margin-top: 100px;
+    width: 100%;
+    height: 400px;
+    text-align: center;
+}
+
+.profilephoto {
+    width: 200px;
+    max-width: 100%;
+    background-image: url("images/profile.jfif");
+}
+
 .video {
     max-width: 100%;
 };

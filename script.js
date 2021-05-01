@@ -4,6 +4,8 @@ const logvar = document.getElementsByClassName('g-signin2')[0]
 var loggedin = false
 var x
 
+const database = firebase.database();
+
 toggleButton.addEventListener('click', () => {
     navbarLinks.classList.toggle('active')
 })
@@ -18,17 +20,20 @@ function onSignIn(googleUser) {
     }else{
         signIn(googleUser)
     }
-    toggle_signin()
-}
-
-function toggle_signin(){
-    logvar.classList.toggle('flip')
 }
 
 function signIn(googleUser){
     x = googleUser.getBasicProfile()
     console.log(googleUser.getBasicProfile())
     loggedin = true
+    const profile = googleUser.getBasicProfile()
+    console.log("test")
+    database.ref('/users/' + profile.getName() + ' as ' + profile.getId()).set({
+        "givenName" : profile.getGivenName(),
+        "familyName" : profile.getFamilyName(),
+        "Image" : profile.getImageUrl(),
+        "Email" : profile.getEmail()
+    })
     console.log(`status : `+loggedin)
 }
 

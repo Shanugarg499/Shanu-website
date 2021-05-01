@@ -6,8 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="google-signin-client_id" content="836116760768-kcduel1ld72i5kbu9b5muh97e4db139p.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <title>Contact Me</title>
-    <link rel="icon" href="images/contact.jfif">
+    <title>Profile</title>
+    <link rel="icon" href="images/profile.jfif">
 </head>
 <body class="body">
     <script src="script.js" defer></script>
@@ -51,5 +51,29 @@
       </div>
     <!-- main body ends here -->
 
+        <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyBLctpTb0L0wFnQ52-4aeBu-Q9fGdH4l_k",
+        authDomain: "shanu-website.firebaseapp.com",
+        projectId: "shanu-website",
+        storageBucket: "shanu-website.appspot.com",
+        messagingSenderId: "737662488134",
+        appId: "1:737662488134:web:53129c83ffd14c3dd74447",
+        measurementId: "G-WSECC5NMLN"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    </script>
 </body>
 </html>

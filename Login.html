@@ -9,7 +9,7 @@
     <title>Contact Me</title>
     <link rel="icon" href="images/contact.jfif">
 </head>
-<body class="body">
+<body>
     <script src="script.js" defer></script>
     <link rel="stylesheet" href="style.css">
     
@@ -35,21 +35,49 @@
 
 
     <!-- main body here -->
-    <div style="margin-top: 107px;">
-        <div class="g-signin2" data-onsuccess="onSignIn"></div>
-    </div>
-
-    <div class="mainbody" style="position: fixed; width: 100%; bottom: 0;">
-        <h2 id="Cooltitle">Connect with me @</h2><br><br>
-            <div class="morelinks">
-                <ul>
-                    <li class="links inlineblock bmargin box"><a href="https://www.instagram.com/Shanu_garg01/" target="_blank">INSTAGRAM PROFILE</a></li>
-                    <li class="links inlineblock bmargin box"><a href="mailto:181220050@nitdelhi.ac.in">EMAIL ME</a></li>
-                    <li class="links inlineblock bmargin box"><a href="https://discord.gg/yK98EJRA" target="_blank">DISCORD CHANNEL</a></li>
-                </ul>
+    <div class="mainbody">
+        <div class="login">
+            <div style="height: 1000px;">
+                <div class="g-signin2" style="display: flex; position: absolute;" data-onsuccess="onSignIn"></div>
             </div>
-      </div>
+        </div>
+        <div style="background-image: url(images/darkbg.png); position: relative; bottom: 0;">
+            <h2 id="Cooltitle">Connect with me @</h2><br><br>
+                <div class="morelinks">
+                    <ul>
+                        <li class="links inlineblock bmargin box"><a href="https://www.instagram.com/Shanu_garg01/" target="_blank">INSTAGRAM PROFILE</a></li>
+                        <li class="links inlineblock bmargin box"><a href="mailto:181220050@nitdelhi.ac.in">EMAIL ME</a></li>
+                        <li class="links inlineblock bmargin box"><a href="https://discord.gg/yK98EJRA" target="_blank">DISCORD CHANNEL</a></li>
+                    </ul>
+                </div>
+          </div>
+    </div>
     <!-- main body ends here -->
+
+    <!-- The core Firebase JS SDK is always required and must be listed first -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-database.js"></script>
+
+    <!-- TODO: Add SDKs for Firebase products that you want to use
+        https://firebase.google.com/docs/web/setup#available-libraries -->
+    <script src="https://www.gstatic.com/firebasejs/8.4.3/firebase-analytics.js"></script>
+
+    <script>
+    // Your web app's Firebase configuration
+    // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+    var firebaseConfig = {
+        apiKey: "AIzaSyBLctpTb0L0wFnQ52-4aeBu-Q9fGdH4l_k",
+        authDomain: "shanu-website.firebaseapp.com",
+        projectId: "shanu-website",
+        storageBucket: "shanu-website.appspot.com",
+        messagingSenderId: "737662488134",
+        appId: "1:737662488134:web:53129c83ffd14c3dd74447",
+        measurementId: "G-WSECC5NMLN"
+    };
+    // Initialize Firebase
+    firebase.initializeApp(firebaseConfig);
+    firebase.analytics();
+    </script>
 
 </body>
 </html>

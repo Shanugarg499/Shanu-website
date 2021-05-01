@@ -22,7 +22,7 @@ function onSignIn(googleUser) {
 }
 
 function toggle_signin(){
-    logvar.classList.toggle('flip')
+    // logvar.classList.toggle('flip')
 }
 
 function signIn(googleUser){

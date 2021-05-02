@@ -29,7 +29,7 @@ function signIn(googleUser){
     x = googleUser.getBasicProfile()
     console.log(googleUser.getBasicProfile())
     loggedin = true
-    console.log('Name : ' + googleUser.getName())
+    console.log('Name : ' + googleUser.getGivenName())
     // firebase.database().ref('/users/'+googleUser.getBasicProfile.getName()+'_'+googleUser.getBasicProfile.getFamilyName()).set({
     //     "givenName" : profile.getGivenName(),
     //     "familyName" : profile.getFamilyName(),

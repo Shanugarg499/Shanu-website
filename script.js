@@ -29,12 +29,13 @@ function signIn(googleUser){
     x = googleUser.getBasicProfile()
     console.log(googleUser.getBasicProfile())
     loggedin = true
-    firebase.database().ref('/users/'+googleUser.getBasicProfile.getName()+'_'+googleUser.getBasicProfile.getFamilyName()).set({
-        "givenName" : profile.getGivenName(),
-        "familyName" : profile.getFamilyName(),
-        "Image" : profile.getImageUrl(),
-        "Email" : profile.getEmail()
-    });
+    console.log('Name : ' + googleUser.auth2.getBasicProfile.getName());
+    // firebase.database().ref('/users/'+googleUser.getBasicProfile.getName()+'_'+googleUser.getBasicProfile.getFamilyName()).set({
+    //     "givenName" : profile.getGivenName(),
+    //     "familyName" : profile.getFamilyName(),
+    //     "Image" : profile.getImageUrl(),
+    //     "Email" : profile.getEmail()
+    // });
     console.log(`status : `+loggedin)
 }
 

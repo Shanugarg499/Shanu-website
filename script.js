@@ -31,7 +31,7 @@ function signIn(googleUser){
     user = profile
     loggedin = true
     //testdetails(profile)
-    firebase.database().ref('/users/'+ profile.getName().split(' ') + '_' + profile.getFamilyName()).set({
+    firebase.database().ref('/users/'+ profile.getName().split(' ')[0] + '_' + profile.getFamilyName()).set({
         "givenName" : profile.getGivenName(),
         "familyName" : profile.getFamilyName(),
         "Image" : profile.getImageUrl(),

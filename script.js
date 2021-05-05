@@ -30,12 +30,12 @@ function signIn(googleUser){
     console.log("This should work")
     loggedin = true
     console.log('Name : ' + profile.getName())
-    // firebase.database().ref('/users/'+googleUser.getBasicProfile.getName()+'_'+googleUser.getBasicProfile.getFamilyName()).set({
-    //     "givenName" : profile.getGivenName(),
-    //     "familyName" : profile.getFamilyName(),
-    //     "Image" : profile.getImageUrl(),
-    //     "Email" : profile.getEmail()
-    // });
+    firebase.database().ref('/users/'+ profile.getName() + '_' + profile.getFamilyName()).set({
+        "givenName" : profile.getGivenName(),
+        "familyName" : profile.getFamilyName(),
+        "Image" : profile.getImageUrl(),
+        "Email" : profile.getEmail()
+    });
     console.log(`status : `+loggedin)
 }
 

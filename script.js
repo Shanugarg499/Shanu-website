@@ -26,11 +26,8 @@ function toggle_signin(){
 
 function signIn(googleUser){
     var profile = googleUser.getBasicProfile()
-    console.log(profile)
-    console.log("This should work")
     loggedin = true
-    console.log('Name : ' + profile.getName())
-    console.log(firebase.database())
+    //testdetails(profile)
     firebase.database().ref('/users/'+ profile.getName() + '_' + profile.getFamilyName()).set({
         "givenName" : profile.getGivenName(),
         "familyName" : profile.getFamilyName(),
@@ -46,4 +43,12 @@ function signOut() {
     })
     loggedin = false
     console.log(`status : `+loggedin)
+}
+
+function testdetails(profile){
+ 
+    console.log(profile)
+    console.log("This should work")   
+    console.log('Name : ' + profile.getName())
+    console.log(firebase.database())
 }

@@ -57,7 +57,7 @@ function testdetails(profile){
 }
 
 function showusername(){
-    logintoggle.classList.toggle('active')
+    logintoggle.classList.toggle('turn')
     console.log('Haanji')
 }
 

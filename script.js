@@ -1,6 +1,8 @@
 const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const navbarLinks = document.getElementsByClassName('navbar-links')[0]
+const logintoggle = document.getElementsByClassName('logintext')[0]
 const logvar = document.getElementsByClassName('g-signin2')[0]
+var user = 'your profile'
 var loggedin = false
 
 toggleButton.addEventListener('click', () => {
@@ -26,6 +28,7 @@ function toggle_signin(){
 
 function signIn(googleUser){
     var profile = googleUser.getBasicProfile()
+    user = profile
     loggedin = true
     //testdetails(profile)
     firebase.database().ref('/users/'+ profile.getName() + '_' + profile.getEmail).set({
@@ -52,3 +55,10 @@ function testdetails(profile){
     console.log('Name : ' + profile.getName())
     console.log(firebase.database())
 }
+
+function showusername(){
+    logintoggle.classList.toggle('active')
+    console.log('Haanji')
+}
+
+window.onload = showusername;

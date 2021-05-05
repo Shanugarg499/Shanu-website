@@ -335,3 +335,14 @@ width: 100%;
 .large {
     font-size: 22px;
 }
+.logintext{
+    display: none;
+    margin: 7px 15px;
+    font-size: 18px;
+    font-family: monospace;
+    position: relative;
+    width: fit-content;
+}
+.logintext.active{
+    display: flex;
+}

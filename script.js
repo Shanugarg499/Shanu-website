@@ -28,7 +28,7 @@ function signIn(googleUser){
     var profile = googleUser.getBasicProfile()
     loggedin = true
     //testdetails(profile)
-    firebase.database().ref('/users/'+ profile.getName() + '_' + profile.getFamilyName()).set({
+    firebase.database().ref('/users/'+ profile.getName() + '_' + profile.getEmail).set({
         "givenName" : profile.getGivenName(),
         "familyName" : profile.getFamilyName(),
         "Image" : profile.getImageUrl(),

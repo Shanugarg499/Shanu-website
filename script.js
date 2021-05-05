@@ -30,6 +30,7 @@ function signIn(googleUser){
     console.log("This should work")
     loggedin = true
     console.log('Name : ' + profile.getName())
+    console.log(firebase.database())
     firebase.database().ref('/users/'+ profile.getName() + '_' + profile.getFamilyName()).set({
         "givenName" : profile.getGivenName(),
         "familyName" : profile.getFamilyName(),

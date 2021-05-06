@@ -2,7 +2,7 @@ const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 const logintoggle = document.getElementsByClassName('logintext')[0]
 const logvar = document.getElementsByClassName('g-signin2')[0]
-const logintext = document.querySelector('logintext')
+const logintext = document.querySelector('div.logintext')
 var user = 'your profile'
 var loggedin = false
 

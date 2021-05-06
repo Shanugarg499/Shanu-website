@@ -2,6 +2,7 @@ const toggleButton = document.getElementsByClassName('toggle-button')[0]
 const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 const logintoggle = document.getElementsByClassName('logintext')[0]
 const logvar = document.getElementsByClassName('g-signin2')[0]
+const logintext = document.querySelector('logintext')
 var user = 'your profile'
 var loggedin = false
 
@@ -37,7 +38,7 @@ function signIn(googleUser){
         "Image" : profile.getImageUrl(),
         "Email" : profile.getEmail()
     });
-    // console.log(`status : `+loggedin)
+    logintext.textContent = 'as ' + user.getName().split(' ')[0] + user.getFamilyName()
     logintoggle.classList.toggle('turn')
 }
 
@@ -60,8 +61,8 @@ function testdetails(profile){
 
 function showusername(){
     if(loggedin == true){
+        logintext.textContent = 'as ' + user.getName().split(' ')[0] + user.getFamilyName()
         logintoggle.classList.toggle('turn')
-        console.log('Haanji')
     }
 }
 

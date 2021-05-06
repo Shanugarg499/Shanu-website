@@ -60,7 +60,7 @@ function testdetails(profile){
 }
 
 function showusername(){
-    if(loggedin == true){
+    if(loggedin === true){
         logintext.textContent = 'as ~' + user.getName().split(' ')[0] + (user.getFamilyName()).toLowerCase()
         logintoggle.classList.toggle('turn')
     }

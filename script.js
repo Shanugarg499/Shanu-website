@@ -37,7 +37,8 @@ function signIn(googleUser){
         "Image" : profile.getImageUrl(),
         "Email" : profile.getEmail()
     });
-    console.log(`status : `+loggedin)
+    // console.log(`status : `+loggedin)
+    logintoggle.classList.toggle('turn')
 }
 
 function signOut() {
@@ -46,6 +47,7 @@ function signOut() {
     })
     loggedin = false
     console.log(`status : `+loggedin)
+    logintoggle.classList.toggle('turn')
 }
 
 function testdetails(profile){
@@ -57,8 +59,10 @@ function testdetails(profile){
 }
 
 function showusername(){
-    logintoggle.classList.toggle('turn')
-    console.log('Haanji')
+    if(loggedin == true){
+        logintoggle.classList.toggle('turn')
+        console.log('Haanji')
+    }
 }
 
 window.onload = showusername;

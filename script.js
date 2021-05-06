@@ -44,10 +44,10 @@ function signIn(googleUser){
 
 function signOut() {
     gapi.auth2.getAuthInstance().signOut().then(function() {
-      console.log('user signed out')
+    //   console.log('user signed out')
     })
     loggedin = false
-    console.log(`status : `+loggedin)
+    // console.log(`status : `+loggedin)
     logintoggle.classList.toggle('turn')
 }
 
@@ -61,7 +61,7 @@ function testdetails(profile){
 
 function showusername(){
     if(loggedin == true){
-        logintext.textContent = 'as ' + user.getName().split(' ')[0] + user.getFamilyName()
+        logintext.textContent = 'as ~' + user.getName().split(' ')[0] + (user.getFamilyName()).toLowerCase()
         logintoggle.classList.toggle('turn')
     }
 }

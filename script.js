@@ -28,15 +28,14 @@ function toggle_signin(){
 }
 
 function signIn(googleUser){
-    var profile = googleUser.getBasicProfile()
-    user = profile
+    user = googleUser.getBasicProfile()
     loggedin = true
     //testdetails(profile)
-    firebase.database().ref('/users/'+ profile.getName().split(' ')[0] + '_' + profile.getFamilyName()).set({
-        "givenName" : profile.getGivenName(),
-        "familyName" : profile.getFamilyName(),
-        "Image" : profile.getImageUrl(),
-        "Email" : profile.getEmail()
+    firebase.database().ref('/users/'+ user.getName().split(' ')[0] + '_' + user.getFamilyName()).set({
+        "givenName" : user.getGivenName(),
+        "familyName" : user.getFamilyName(),
+        "Image" : user.getImageUrl(),
+        "Email" : user.getEmail()
     });
     logintext.textContent = 'as ~' + user.getName().split(' ')[0] + (user.getFamilyName()).toLowerCase()
     logintoggle.classList.toggle('turn')

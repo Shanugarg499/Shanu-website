@@ -38,16 +38,27 @@
     <!-- main body here -->
     <div class="mainbody">
         <div class="login">
-            <div style="height: 100px; justify-content: center;">
-                <p class="white" style="display: flex; padding: 15px; font-family: monospace; font-size: 18px;">Let me know you visited, by signing up.</p>
-                <div class="g-signin2" style="margin: 0 15px; position: relative; width: 125px;" data-onsuccess="onSignIn"></div>
+            <p class="white" style="display: flex; padding: 15px; font-family: monospace; font-size: 18px;">Let me know you visited, by signing up.</p>
+            <div style="justify-content: space-around; display: flex; margin: 40px 20px;">
+                <div class="g-signin2" style="margin: 18px 15px; position: relative; width: 125px;" data-onsuccess="onSignIn"></div>
+                <div class="feedback" style="display: flex; width: fit-content;">
+                    <textarea name="feedback" id="feedback" cols="40" rows="4" style="padding: 10px;" placeholder="Enter your valuable Feedback here..."></textarea>
+                    <div>
+                        <br>
+                        <button onclick="savefeedback()" style="width: fit-content; height: fit-content; padding: 12px; margin: 10px;">Submit my feedback.</button>
+                        <br>
+                        <br>
+                    </div>
+                </div>
                 <div class="white logintext"> as Shanu Garg </div>
             </div>
         </div>
         <p class="white" style="margin: 30px; font-family: monospace; font-size: 18px;">Products you might be looking for:</p>
         <div class="border" style="border: royalblue solid; margin: 15px;">
             <div class="ads" style="height: 800px; border: crimson solid; margin: 2px">
-                
+                <div class="text white" style="margin: 50px; font-family: monospace; font-size: 18px;">
+                    Google adsense is - on the way to show you products of your interest that you might be looking for and to sponser the developement of this website for organizing events / contests and providing more services.
+                </div>
             </div>
         </div>
         <div style="background-image: url(images/darkbg.png); position: relative; bottom: 0;">

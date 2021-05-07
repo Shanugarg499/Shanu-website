@@ -66,4 +66,16 @@ function showusername(){
     }
 }
 
+function savefeedback(){
+    if(loggedin){
+        firebase.database().ref('/feedbacks/'+ profile.getName().split(' ')[0] + '_' + profile.getFamilyName()).set({
+            "feedback" : document.getElementById('feedback'),
+            "Image" : profile.getImageUrl(),
+            "Email" : profile.getEmail()
+        });
+        alert('Thanks for your feedback.')
+    }else
+    alert('Please login first to send your feedback.')
+}
+
 window.onload = showusername;

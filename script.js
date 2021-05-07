@@ -88,6 +88,8 @@ function savefeedback(){
         let obj = new Feedback(element)
         firebase.database().ref('/feedbacks/'+ user.getName().split(' ')[0] + '_' + user.getFamilyName()).set(obj.json);
         alert('Thanks for your feedback.')
+        console.log(obj.json)
+        console.log('sent successfully')
     }else
     alert('Please login first to send your feedback.')
 }

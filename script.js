@@ -6,6 +6,7 @@ const logintext = document.querySelector('div.logintext')
 var user = 'your profile'
 var loggedin = false
 
+
 toggleButton.addEventListener('click', () => {
     navbarLinks.classList.toggle('active')
 })
@@ -65,14 +66,27 @@ function showusername(){
     }
 }
 
+
+class Feedback{
+    Feedback(element){
+        this.feedback = element.value;
+        this.email = user.getEmail();
+        this.imageurl = user.getImageUrl();
+    }
+    json(){
+        return {
+            "feedback" : this.feedback,
+            "email" : this.email,
+            "image" : this.image
+        }
+    }
+}
+
 function savefeedback(){
     if(loggedin){
-        console.log()
-        firebase.database().ref('/feedbacks/'+ user.getName().split(' ')[0] + '_' + user.getFamilyName()).set({
-            "Image" : user.getImageUrl(),
-            "Email" : user.getEmail(),
-            "feedback" : document.getElementById('feedback').value
-        });
+        let element = document.getElementById('feedback')
+        let obj = new Feedback(element)
+        firebase.database().ref('/feedbacks/'+ user.getName().split(' ')[0] + '_' + user.getFamilyName()).set(obj.json);
         alert('Thanks for your feedback.')
     }else
     alert('Please login first to send your feedback.')

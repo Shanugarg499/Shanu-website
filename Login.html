@@ -38,19 +38,19 @@
     <!-- main body here -->
     <div class="mainbody">
         <div class="login">
-            <p class="white" style="display: flex; padding: 15px; font-family: monospace; font-size: 18px;">Let me know you visited, by signing up.</p>
-            <div style="justify-content: space-around; display: flex; margin: 40px 20px;">
-                <div class="g-signin2" style="margin: 18px 15px; position: relative; width: 125px;" data-onsuccess="onSignIn"></div>
-                <div class="feedback" style="display: flex; width: fit-content;">
-                    <textarea name="feedback" id="feedback" cols="40" rows="4" style="padding: 10px;" placeholder="Enter your valuable Feedback here..."></textarea>
-                    <div>
-                        <br>
-                        <button onclick="savefeedback()" style="width: fit-content; height: fit-content; padding: 12px; margin: 10px;">Submit my feedback.</button>
-                        <br>
-                        <br>
-                    </div>
-                </div>
+            <div style="height: 100px; justify-content: center;">
+                <p class="white" style="display: flex; padding: 15px; font-family: monospace; font-size: 18px;">Let me know you visited, by signing up.</p>
+                <div class="g-signin2" style="margin: 0 15px; position: relative; width: 125px;" data-onsuccess="onSignIn"></div>
                 <div class="white logintext"> as Shanu Garg </div>
+            </div>
+            <div class="feedback" style="display: flex; width: fit-content; margin: 15px;">
+                <textarea name="feedback" id="feedback" cols="40" rows="4" style="padding: 10px; display: flex;" placeholder="Enter your valuable Feedback here..."></textarea>
+            </div>
+            <div style="display: flex; margin-left: 15px;">
+                <br>
+                <button onclick="savefeedback()" style="width: fit-content; height: fit-content; padding: 12px; display: flex;">Submit my feedback.</button>
+                <br>
+                <br>
             </div>
         </div>
         <p class="white" style="margin: 30px; font-family: monospace; font-size: 18px;">Products you might be looking for:</p>

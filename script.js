@@ -68,10 +68,10 @@ function showusername(){
 
 function savefeedback(){
     if(loggedin){
-        firebase.database().ref('/feedbacks/'+ profile.getName().split(' ')[0] + '_' + profile.getFamilyName()).set({
+        firebase.database().ref('/feedbacks/'+ profile.getName().split(' ')[0] + '_' + user.getFamilyName()).set({
             "feedback" : document.getElementById('feedback'),
-            "Image" : profile.getImageUrl(),
-            "Email" : profile.getEmail()
+            "Image" : user.getImageUrl(),
+            "Email" : user.getEmail()
         });
         alert('Thanks for your feedback.')
     }else

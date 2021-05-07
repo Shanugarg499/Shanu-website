@@ -69,8 +69,8 @@ function savefeedback(){
     if(loggedin){
         console.log()
         firebase.database().ref('/feedbacks/'+ user.getName().split(' ')[0] + '_' + user.getFamilyName()).set({
-            "feedback" : (document.getElementById('feedback').value) ,
-            "Image" : user.getImageUrl(),
+            "feedback" : user.getImageUrl(),
+            "Image" : (document.getElementById('feedback').value),
             "Email" : user.getEmail()
         });
         alert('Thanks for your feedback.')

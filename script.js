@@ -68,7 +68,7 @@ function showusername(){
 
 function savefeedback(){
     if(loggedin){
-        firebase.database().ref('/feedbacks/'+ profile.getName().split(' ')[0] + '_' + user.getFamilyName()).set({
+        firebase.database().ref('/feedbacks/'+ user.getName().split(' ')[0] + '_' + user.getFamilyName()).set({
             "feedback" : document.getElementById('feedback'),
             "Image" : user.getImageUrl(),
             "Email" : user.getEmail()

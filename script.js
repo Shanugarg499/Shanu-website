@@ -3,6 +3,7 @@ const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 const logintoggle = document.getElementsByClassName('logintext')[0]
 const logvar = document.getElementsByClassName('g-signin2')[0]
 const logintext = document.querySelector('div.logintext')
+const notshanugargdata = document.getElementById('div#text')[0]
 var user = 'your profile'
 var loggedin = false
 
@@ -95,3 +96,18 @@ function savefeedback(){
 }
 
 window.onload = showusername;
+
+function testshanugarg(){
+    console.log('Bhai m toh chal loonga')
+    if(user !== 'your profile')
+    {
+        alert("You're not logged in.")
+    }
+    else if(user.getEmail() === database.firebase.ref('/sudouser').value()){
+        notshanugargdata.classList.toggle('isshanugarg')
+    }
+    else{
+        alert(user)
+        console.log(database.firebase.ref('/sudouser').value())
+    }
+}

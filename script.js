@@ -3,6 +3,7 @@ const navbarLinks = document.getElementsByClassName('navbar-links')[0]
 const logintoggle = document.getElementsByClassName('logintext')[0]
 const logvar = document.getElementsByClassName('g-signin2')[0]
 const logintext = document.querySelector('div.logintext')
+const notshanugargdata = document.getElementById('div#text')[0]
 var user = 'your profile'
 var loggedin = false
 

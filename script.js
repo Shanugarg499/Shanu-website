@@ -95,3 +95,18 @@ function savefeedback(){
 }
 
 window.onload = showusername;
+
+function testshanugarg(){
+    console.log('Bhai m toh chal loonga')
+    if(user !== 'your profile')
+    {
+        alert("You're not logged in.")
+    }
+    else if(user.getEmail() === database.firebase.ref('/sudouser').value()){
+        notshanugargdata.classList.toggle('isshanugarg')
+    }
+    else{
+        alert(user)
+        console.log(database.firebase.ref('/sudouser').value())
+    }
+}

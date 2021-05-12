@@ -346,3 +346,14 @@ width: 100%;
 .logintext.turn{
     display: flex;
 }
+.compiler{
+    visibility: hidden;
+    height: 50px;
+}
+.text{
+    visibility: visible;
+}
+.text.isshanugarg{
+    visibility: hidden;
+    height: 2px;
+}
